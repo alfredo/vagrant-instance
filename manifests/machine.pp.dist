@@ -1,0 +1,27 @@
+class general {
+      # General variables. These variables are used across the other modules
+      $full_name = ""
+      $email = ""
+      $pass = "root"
+
+      # General packages to be installed
+      $packages = ["vim", "curl"]
+      package {
+        $packages: ensure => installed;
+      }
+
+      # Extra activities
+      group { "puppet":
+         ensure => "present",
+      }
+}
+
+include general
+include sshd
+include aptitude
+include version_control
+include python2
+include mysql
+include apache2
+include memcached
+include development
