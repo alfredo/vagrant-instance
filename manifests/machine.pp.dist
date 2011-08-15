@@ -25,3 +25,4 @@ include mysql
 include apache2
 include memcached
 include development
+include sun-java

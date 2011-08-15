@@ -7,7 +7,7 @@ Vagrant::Config.run do |config|
   config.vm.box_url = "http://files.vagrantup.com/lucid64.box"
 
   # Boot with a GUI so you can see the screen. (Default is headless)
-  config.vm.boot_mode = :gui
+  # config.vm.boot_mode = :gui
 
   # Assign this VM to a host only network IP, allowing you to access it
   # via the IP.
