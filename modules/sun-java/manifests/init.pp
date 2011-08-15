@@ -24,4 +24,9 @@ apt::source { "partner":
         require => [ Apt::Source["partner"], File["/var/cache/debconf/sun-java6.preseed"] ],
     }
 
+    package { "groovy":
+        ensure => installed,
+        require => [Package["sun-java6-jdk"]],
+    }
+
 }
