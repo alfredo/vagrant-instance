@@ -5,7 +5,7 @@ class general {
       $pass = "root"
 
       # General packages to be installed
-      $packages = ["vim", "curl"]
+      $packages = ["vim", "curl", "ack-grep", "sed"]
       package {
         $packages: ensure => installed;
       }
