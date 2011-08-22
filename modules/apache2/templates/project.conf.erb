@@ -9,7 +9,7 @@
 
     DocumentRoot /var/www
 
-    ProxyPass / http://127.0.0.1:8000/
+    ProxyPass / http://127.0.0.1:8000/ retry=0
     ProxyPassReverse / http://127.0.0.1:8000/
     <Location / >
         Order allow,deny
