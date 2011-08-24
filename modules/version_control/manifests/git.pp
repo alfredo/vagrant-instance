@@ -3,7 +3,10 @@ class version_control::git {
     $git_name = $general::full_name
     $git_email = $general::email
 
-    package { "git-core": ensure => installed }
+    $packages = ["git-core", "git-svn"]
+    package {
+       $packages : ensure => installed;
+    }
 
     file { "gitconfig":
         path => "/home/vagrant/.gitconfig",
