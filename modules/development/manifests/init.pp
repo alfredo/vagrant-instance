@@ -18,4 +18,13 @@ class development {
         source  => "puppet:///modules/development/home/git-completion.bash",
     }
 
+    file { "inputrc":
+        path    => "/home/vagrant/.inputrc",
+        ensure  => present,
+        owner   => vagrant,
+        group   => adm,
+        mode    => 644,
+        source  => "puppet:///modules/development/home/inputrc",
+    }
+
 }
