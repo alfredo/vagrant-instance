@@ -31,7 +31,7 @@ shopt -s checkwinsize
 ##################################################
 bash_prompt_command() {
     # How many characters of the $PWD should be kept
-    local pwdmaxlen=25
+    local pwdmaxlen=20
     # Indicate that there has been dir truncation
     local trunc_symbol=".."
     local dir=${PWD##*/}
@@ -45,11 +45,13 @@ bash_prompt_command() {
     fi
 }
 
+
 function parse_git_dirty {
   [[ $(git status 2> /dev/null | tail -n1) != "nothing to commit (working directory clean)" ]] && echo "*"
 }
+
 function parse_git_branch {
-  git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/(\1$(parse_git_dirty))/"
+  git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/:\1$(parse_git_dirty)/"
 }
 
 bash_prompt() {
@@ -95,7 +97,7 @@ bash_prompt() {
 
     local UC=$W                 # user's color
     [ $UID -eq "0" ] && UC=$R   # root's color
-    PS1="$TITLEBAR${W}[${EMG}\u${EMC}@${EMB}\h ${EMC}\${NEW_PWD}${EMY}\$(parse_git_branch)${W}]${UC}\\$ ${NONE}"
+    PS1="$TITLEBAR${EMG}\u${EMC}@${EMB}\h ${EMC}\${NEW_PWD}${EMY}\$(parse_git_branch)${UC}\\$ ${NONE}"
     # without colors: PS1="[\u@\h \${NEW_PWD}]\\$ "
     # extra backslash in front of \$ to make bash colorize the prompt
 }
