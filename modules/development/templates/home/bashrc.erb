@@ -109,7 +109,7 @@ alias la="ls -a"
 alias exit="clear; exit"
 
 export WORKON_HOME=/projects/.virtualenvs
-source /usr/local/bin//virtualenvwrapper.sh
+source /usr/local/bin/virtualenvwrapper.sh
 
 _virtualenvs ()
 {
@@ -123,11 +123,6 @@ complete -o default -o nospace -F _virtualenvs rmvirtualenv
 
 alias pym='python manage.py'
 
-pyml ()
-{
-  python manage.py $1 --settings=settings_local
-}
-
 alias dj='django-admin.py'
 
 alias djgraph='python manage.py graph_models -a -g -o'
@@ -138,14 +133,14 @@ alias delpyc='find . -iname \*pyc -delete'
 
 alias pretty-json='python -mjson.tool'
 
+alias webshare='python -c "import SimpleHTTPServer;SimpleHTTPServer.test()"'
+
 export PATH=$PATH:$HOME/bin
 export GEM_HOME=$HOME/.gems
 export PATH=$PATH:$GEM_HOME/bin
 
 # Find a file with a pattern in name:
 function ff() { find . -type f -iname '*'$*'*' -ls ; }
-
-
 
 export PATH=$HOME/local/bin:/projects/local-bin:$PATH
 
