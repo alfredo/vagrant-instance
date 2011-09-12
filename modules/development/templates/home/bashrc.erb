@@ -45,6 +45,10 @@ bash_prompt_command() {
     fi
 }
 
+function parse_git_branch {
+  git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
+}
+
 bash_prompt() {
     case $TERM in
      xterm*|rxvt*)
@@ -88,8 +92,7 @@ bash_prompt() {
 
     local UC=$W                 # user's color
     [ $UID -eq "0" ] && UC=$R   # root's color
-
-    PS1="$TITLEBAR${W}[${EMG}\u${EMC}@${EMB}\h${EMC}\${NEW_PWD}${W}]${UC}\\$ ${NONE}"
+    PS1="$TITLEBAR${W}[${EMG}\u${EMC}@${EMB}\h ${EMC}\${NEW_PWD}${EMY}\$(parse_git_branch)${W}]${UC}\\$ ${NONE}"
     # without colors: PS1="[\u@\h \${NEW_PWD}]\\$ "
     # extra backslash in front of \$ to make bash colorize the prompt
 }
