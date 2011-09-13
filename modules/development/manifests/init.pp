@@ -18,6 +18,15 @@ class development {
         source  => "puppet:///modules/development/home/git-completion.bash",
     }
 
+    file { "bash-common":
+        path    => "/home/vagrant/.common.bash",
+        ensure  => present,
+        owner   => vagrant,
+        group   => adm,
+        mode    => 644,
+        source  => "puppet:///modules/development/home/common.bash",
+    }
+
     file { "inputrc":
         path    => "/home/vagrant/.inputrc",
         ensure  => present,
