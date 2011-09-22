@@ -82,5 +82,13 @@ class apache2 {
         notify => Exec["reload-apache2"],
     }
 
+    exec {"/usr/sbin/a2enmod headers":
+        notify => Exec["reload-apache2"],
+    }
+
+    exec {"/usr/sbin/a2enmod expires":
+        notify => Exec["reload-apache2"],
+    }
+
 
 }
