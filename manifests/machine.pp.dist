@@ -26,3 +26,5 @@ include apache2
 include memcached
 include development
 include sun-java
+include postgresql::server
+include postgresql::python
