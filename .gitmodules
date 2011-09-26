@@ -1,0 +1,3 @@
+[submodule "modules/postgresql"]
+	path = modules/postgresql
+	url = https://github.com/uggedal/puppet-module-postgresql.git
