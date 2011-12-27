@@ -122,7 +122,7 @@ export ACK_OPTIONS=--type-add=php=.php,.module,.inc,.install:--type-add=java=.gr
 # Aliases
 alias pym='python manage.py'
 alias dj='django-admin.py'
-alias djgraph='python manage.py graph_models -a -g -o'
+alias djgraph='django-admin.py graph_models -a -g -o'
 alias delpyc='find . -iname \*pyc -delete'
 alias webshare='python -c "import SimpleHTTPServer;SimpleHTTPServer.test()"'
 alias pretty-json='python -mjson.tool'
