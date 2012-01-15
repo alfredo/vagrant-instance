@@ -2,10 +2,11 @@ class general {
       # General variables. These variables are used across the other modules
       $full_name = ""
       $email = ""
+      # password used accross the installation e.g. mysql
       $pass = "root"
 
       # General packages to be installed
-      $packages = ["vim", "curl", "ack-grep", "sed"]
+      $packages = ["vim", "curl", "ack-grep", "sed", "tmux"]
       package {
         $packages: ensure => installed;
       }
