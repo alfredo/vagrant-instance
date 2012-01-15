@@ -1,5 +1,6 @@
 class general {
-      # General variables. These variables are used across the other modules
+      # General variables. These variables are used across
+      # the other modules
       $full_name = ""
       $email = ""
       # password used accross the installation e.g. mysql
@@ -17,9 +18,12 @@ class general {
       }
 }
 
+Exec {
+    path => ["/bin", "/sbin", "/usr/bin", "/usr/sbin"],
+}
+
 include general
 include sshd
-include aptitude
 include version_control
 include python2
 include mysql
