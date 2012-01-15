@@ -4,3 +4,6 @@
 [submodule "modules/apt"]
 	path = modules/apt
 	url = https://github.com/evolvingweb/puppet-apt.git
+[submodule "modules/nginx"]
+	path = modules/nginx
+	url = https://github.com/uggedal/puppet-module-nginx.git
