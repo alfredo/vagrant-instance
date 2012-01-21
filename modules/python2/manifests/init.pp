@@ -7,6 +7,7 @@ class python2 {
             "python-mysqldb",
             "python-imaging",
             "python-memcache",
+            "python-profiler",
     ]
 
     package {
