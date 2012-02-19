@@ -36,4 +36,12 @@ class development {
         source  => "puppet:///modules/development/home/inputrc",
     }
 
+    file { "motd":
+      path    => "/var/run/motd",
+      ensure  => present,
+      mode    => 644,
+      owner   => root,
+      source => "puppet:///modules/development/motd",
+    }
+
 }

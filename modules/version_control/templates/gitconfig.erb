@@ -1,6 +1,6 @@
 [user]
 	name = <%= git_name %>
-	email =<%= git_email %>
+	email = <%= git_email %>
 [giggle]
 	main-window-maximized = false
 	main-window-geometry = 1118x776+203+45
@@ -15,3 +15,6 @@
         slog = log --pretty=format:'%C(bold)%C(yellow)%h%Creset%C(222)%d%Creset %s %C(bold)%C(black)(%cr by %an)'
 [push]
 	default = tracking
+[core]
+        preloadindex = true
+        filemode  = false
