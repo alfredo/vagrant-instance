@@ -17,8 +17,8 @@ Vagrant::Config.run do |config|
   config.ssh.timeout = 300
 
   config.vm.provision :puppet do |puppet|
-    puppet.manifests_path = "manifests"
-    puppet.module_path = "modules"
+    puppet.manifests_path = "puppet"
+    puppet.module_path = "puppet/modules"
     puppet.manifest_file  = "machine.pp"
     puppet.options = "--verbose"
   end
