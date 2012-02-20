@@ -16,11 +16,14 @@ Make sure you have installed:
 - vagrant  > 9.0 http://vagrantup.com/
 - virtualBox https://www.virtualbox.org/
 
+If you feel adventurous you can install the beta vagrant package that doesn't require a ruby gem.
 
-I recommend to set up the ``GEMS_HOME`` on your bash profile so you don't have to ``sudo`` the gem instalation::
+http://downloads.vagrantup.com/tags/v1.0.0.rc1
+
+
+Or you can set up the ``GEMS_HOME`` on your bash profile so you don't have to ``sudo`` the gem instalation::
 
 export GEM_HOME=$HOME/.gems
-
 
 
 Do a checkout of the project::
@@ -30,7 +33,9 @@ $ git clone git://github.com/alfredo/vagrant-instance.git
 
 Copy ``manifest/machine.pp.dist`` to ``manifest/machine.pp`` and edit the file with your details.
 
-This asumes that you have a ``projects`` directory one level up ``../projects`` of  your checkout
+Please note that these details are used to fill in the templates in puppet.
+
+This asumes that you have a ``projects`` directory one level up ``../projects`` of  your checkout.
 
 
 Finally on your checkout directory run::
