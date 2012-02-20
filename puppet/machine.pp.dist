@@ -28,8 +28,10 @@ include version_control
 include python2
 include mysql
 include apache2
+include nginx
 include memcached
 include development
 include sun-java
 include postgresql
+include aptitude
 
