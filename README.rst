@@ -16,7 +16,7 @@ Make sure you have installed:
 - vagrant  > 9.0 http://vagrantup.com/
 - virtualBox https://www.virtualbox.org/
 
-If you feel adventurous you can install the beta vagrant package that doesn't require a ruby gem.
+If you feel adventurous you can install the release candidate 1.0 vagrant as a package that doesn't require a ruby gem.
 
 http://downloads.vagrantup.com/tags/v1.0.0.rc1
 
