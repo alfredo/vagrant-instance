@@ -18,7 +18,7 @@ Make sure you have installed:
 
 If you feel adventurous you can install the release candidate 1.0 vagrant as a package that doesn't require a ruby gem.
 
-http://downloads.vagrantup.com/tags/v1.0.0.rc1
+http://downloads.vagrantup.com/tags/v1.0.0.rc2
 
 
 Or you can set up the ``GEMS_HOME`` on your bash profile so you don't have to ``sudo`` the gem instalation::
